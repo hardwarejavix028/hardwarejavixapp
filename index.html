@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Content App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <h2>MiContentApp</h2>
+    <ul>
+      <li onclick="showSection('dashboard')">Dashboard</li>
+      <li onclick="showSection('calendar')">Calendario</li>
+      <li onclick="showSection('generator')">Generador IA</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div id="dashboard" class="section">
+      <h1>Dashboard</h1>
+      <p>Seguidores: <strong>12,300</strong></p>
+      <p>Engagement promedio: <strong>6.8%</strong></p>
+    </div>
+
+    <div id="calendar" class="section hidden">
+      <h1>Calendario</h1>
+      <p>📅 Post programado para viernes: “Video de rutina de skincare”</p>
+    </div>
+
+    <div id="generator" class="section hidden">
+      <h1>Generador de contenido IA</h1>
+      <input type="text" id="ideaInput" placeholder="Tema del post (ej. skincare, motivación)" />
+      <button onclick="generateContent()">Generar</button>
+      <div id="output"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
